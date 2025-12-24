@@ -1,0 +1,101 @@
+settings:
+    debug-mode: false
+    image-quality:
+        compress-images:
+            enabled: false
+            value: 0.0
+    internal-webserver:
+        enabled: true
+        bind: 0.0.0.0
+        port: 8125
+        flush-json-immediately: false
+    render-progress-logging:
+        enabled: true
+        interval-seconds: 60
+    ui:
+        coordinates:
+            enabled: true
+        link:
+            enabled: true
+        sidebar:
+            pinned: unpinned
+    language-file: lang-en.yml
+    update-checker: true
+    web-address: http://localhost:8080
+    web-directory:
+        path: web
+        auto-update: true
+    commands:
+        main-command-label: squaremap
+        main-command-aliases:
+        - map
+world-settings:
+    default:
+        map:
+            enabled: true
+            max-render-threads: 1
+            renderers:
+            -   type: basic
+                label: surface
+            -   type: cave
+                label: cave
+            biomes:
+                enabled: true
+                blend-biomes: 0
+            glass:
+                clear: false
+            lava:
+                checkerboard: false
+            water:
+                clear-depth: false
+                checkerboard: false
+            zoom:
+                maximum: 0
+                default: 0
+                extra: 0
+            background-render:
+                enabled: true
+                max-chunks-per-interval: 1
+                interval-seconds: 10
+                max-render-threads: 1
+            markers:
+                spawn-icon:
+                    enabled: false
+                    show-controls: true
+                    default-hidden: false
+                    layer-priority: 0
+                    z-index: 0
+                world-border:
+                    enabled: false
+                    show-controls: true
+                    default-hidden: false
+                    layer-priority: 1
+                    z-index: 1
+                update-interval-seconds: 5
+            visibility-limits:
+            -   type: world-border
+                enabled: 'false'
+            display-name: '{world}'
+            order: 0
+            icon: ''
+            iterate-up: false
+            max-height: -1
+        player-tracker:
+            enabled: true
+            update-interval-seconds: 1
+            nameplate:
+                enabled: true
+                show-head: false
+                show-armor: false
+                show-health: true
+                heads-url: https://mc-heads.net/avatar/{uuid}/16
+            hide:
+                invisible: true
+                spectators: true
+                map-invisibility-equipment: true
+            use-display-names: false
+            show-controls: true
+            default-hidden: false
+            layer-priority: 2
+            z-index: 2
+config-version: 2
